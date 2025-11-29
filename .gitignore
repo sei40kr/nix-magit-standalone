@@ -1,0 +1,14 @@
+# Nix build outputs
+result
+result-*
+
+# Development notes
+AGENTS.md
+
+# direnv
+.direnv/
+
+# Emacs
+*~
+\#*\#
+.\#*

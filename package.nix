@@ -126,7 +126,7 @@ stdenv.mkDerivation {
 
   meta = with lib; {
     description = "Standalone Magit ${lib.optionalString evil " with Evil support"}";
-    homepage = "https://github.com/sei40kr/nix-magit";
+    homepage = "https://github.com/sei40kr/nix-magit-standalone";
     license = licenses.gpl3Plus;
     platforms = platforms.unix;
     mainProgram = "magit";

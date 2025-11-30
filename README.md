@@ -1,4 +1,4 @@
-# nix-magit
+# nix-magit-standalone
 
 A Nix Flake that provides standalone Magit with Evil (Vim keybindings) support.
 
@@ -14,7 +14,7 @@ A Nix Flake that provides standalone Magit with Evil (Vim keybindings) support.
 
 ```bash
 # Install (Evil mode enabled by default)
-nix profile install github:sei40kr/nix-magit
+nix profile install github:sei40kr/nix-magit-standalone
 ```
 
 ### Running

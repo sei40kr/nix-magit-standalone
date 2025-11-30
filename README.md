@@ -8,6 +8,7 @@ A Nix Flake that provides standalone Magit with Evil (Vim keybindings) support.
 - Evil (Vim keybindings) enabled by default
 - Simple installation via Nix Flake
 - Lightning-fast startup using Emacs portable dumper (pdumper) - heavily optimized for instant launch
+- External editor support via vterm - opens your `$GIT_EDITOR`/`$EDITOR` in a transparent fullscreen terminal buffer for commit messages, rebase scripts, and other Git operations (uses a hacky but effective approach)
 
 ## Usage
 
@@ -47,10 +48,6 @@ magit-standalone.override {
   theme = "doom-gruvbox";
 };
 ```
-
-## Known Issues
-
-1. Cannot open editor through server socket, so all git operations that require an editor (including commits) are unavailable
 
 ## Credits
 

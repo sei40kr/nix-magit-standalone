@@ -49,6 +49,36 @@ magit-standalone.override {
 };
 ```
 
+## Performance
+
+Thanks to pdumper optimization, nix-magit-standalone achieves blazing-fast startup times:
+
+**Startup time: ~20ms** (average of 5 runs)
+
+```bash
+# Measurement command
+for i in 1 2 3 4 5; do
+  echo "Run $i:"
+  (time timeout 5 ./result/bin/magit --eval '(kill-emacs)' 2>&1 >/dev/null) 2>&1 | tail -1
+done
+```
+
+Results:
+```
+Run 1: 0.025 total
+Run 2: 0.018 total
+Run 3: 0.017 total
+Run 4: 0.019 total
+Run 5: 0.020 total
+```
+
+Measured on:
+- CPU: Intel Core i7-12700K @ 5.00 GHz
+- OS: NixOS 25.05 (Warbler)
+- Kernel: Linux 6.12.30
+
+This is significantly faster than standard Emacs startup, making it feel instant and perfect for quick Git operations.
+
 ## Credits
 
 This project uses the following excellent Emacs packages:

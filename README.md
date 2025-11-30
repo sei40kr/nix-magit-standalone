@@ -7,6 +7,7 @@ A Nix Flake that provides standalone Magit with Evil (Vim keybindings) support.
 - Easy to use Magit without Emacs knowledge
 - Evil (Vim keybindings) enabled by default
 - Simple installation via Nix Flake
+- Lightning-fast startup using Emacs portable dumper (pdumper) - heavily optimized for instant launch
 
 ## Usage
 

@@ -64,6 +64,7 @@ done
 ```
 
 Results:
+
 ```
 Run 1: 0.025 total
 Run 2: 0.018 total
@@ -73,11 +74,25 @@ Run 5: 0.020 total
 ```
 
 Measured on:
+
 - CPU: Intel Core i7-12700K @ 5.00 GHz
 - OS: NixOS 25.05 (Warbler)
 - Kernel: Linux 6.12.30
 
 This is significantly faster than standard Emacs startup, making it feel instant and perfect for quick Git operations.
+
+## Known Issues
+
+### External Editor Support
+
+While external editor support via vterm works for most use cases, there are some known limitations:
+
+- **Visible minibuffer**: The Emacs minibuffer remains visible while the external editor is open, which may be distracting or visually inconsistent.
+- **Incomplete Emacs keybinding isolation**: Emacs keybindings cannot be fully disabled when the external editor is open. Some keybindings like those starting with `C-c` are captured by Emacs instead of being passed through to the editor.
+- **Esc key handling**: The Esc key is not recognized as Esc itself, but instead is interpreted as the beginning of a Meta key sequence, which can interfere with editor functionality.
+- **Color theme interference**: Since the external editor runs inside Emacs' vterm, ANSI colors are affected by the Emacs color theme. This may cause visual inconsistencies with your editor's native color scheme.
+
+These are inherent limitations of the current approach of running editors inside vterm. Future improvements may address these issues.
 
 ## Credits
 

@@ -101,6 +101,7 @@ This project uses the following excellent Emacs packages:
 - [Magit](https://magit.vc/) - A Git porcelain inside Emacs
 - [vertico.el](https://github.com/minad/vertico) - Vertical completion UI
 - [clipetty](https://github.com/spudlyo/clipetty) - OSC 52 clipboard integration for terminal Emacs
+- [vterm](https://github.com/akermu/emacs-libvterm) - Fully-featured terminal emulator for external editor support
 - [Evil](https://github.com/emacs-evil/evil) - Extensible vi layer for Emacs (optional)
 - [Evil Collection](https://github.com/emacs-evil/evil-collection) - Collection of Evil bindings for various modes (optional)
 

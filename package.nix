@@ -21,6 +21,7 @@ let
   emacsWithPackages = emacsNoGui.pkgs.withPackages (
     epkgs:
     [
+      epkgs.clipetty
       epkgs.doom-themes
       epkgs.magit
       epkgs.vertico
@@ -46,6 +47,10 @@ let
     ;; Enable font-lock and transient-mark modes to allow theme loading in batch mode
     (global-font-lock-mode +1)
     (transient-mark-mode +1)
+
+    ;; Use system clipboard through OSC 52
+    (require 'clipetty)
+    (global-clipetty-mode +1)
 
     ${lib.optionalString evil ''
       (require 'evil)

@@ -1,5 +1,10 @@
 # nix-magit-standalone
 
+> [!WARNING]
+> **This repository is archived and no longer maintained.**
+>
+> No further updates, bug fixes, or support will be provided. Please consider using [**rugit**](https://github.com/sei40kr/rugit) instead — a Magit-like Git CLI tool of my own making.
+
 A Nix Flake that provides standalone Magit with Evil (Vim keybindings) support.
 
 ## Features
